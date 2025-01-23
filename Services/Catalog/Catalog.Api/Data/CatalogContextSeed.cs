@@ -18,8 +18,8 @@ namespace Catalog.Api.Data
 
         private static IEnumerable<Product> GetSeedData()
         {
-            return new List<Product>()
-            {
+            return
+            [
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f5",
@@ -80,7 +80,7 @@ namespace Catalog.Api.Data
                     Price = 240.00M,
                     Category = "Home Kitchen"
                 }
-            };
+            ];
         }
     }
 }
