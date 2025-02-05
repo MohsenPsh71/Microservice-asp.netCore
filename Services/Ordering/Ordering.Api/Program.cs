@@ -1,4 +1,5 @@
 using Ordering.Application;
+using Ordering.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 #region Dependencies
 ApplicationServiceRegistration.AddApplicationServices(builder.Services);
+InfrastructureServiceRegistration.AddInfrastructureServices(builder.Services, builder.Configuration);
 #endregion
 
 var app = builder.Build();
